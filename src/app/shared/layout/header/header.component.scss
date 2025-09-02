@@ -1,0 +1,92 @@
+.header {
+  padding: 21px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+
+  &__logo {
+    padding-right: 41px;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-white-blue);
+    padding: 15px 25px;
+    border-radius: 10px;
+    width: 100%;
+    justify-content: space-between;
+
+    &-left {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      gap: 10px
+    }
+
+    &-icon {
+      width: 18px;
+      height: 18px;
+    }
+
+    &-input {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      input {
+        all:unset;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: var(--color-gray-lite);
+        width: 95%;
+        height: 100%;
+      }
+    }
+
+    &-button {
+      cursor: pointer;
+      width: 37.78px;
+      height: 24px;
+
+      button {
+        all: unset;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    
+    &-login, &-cart {
+      padding: 0 20px;
+      display: flex;
+      width: max-content;
+
+      .login__icon, .cart__icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 6px;
+      }
+
+      .login__text, .cart__text {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+        color: var(--color-gray-lite);
+      }
+    }
+    
+
+    &-login:not(:last-child) {
+    border-right: 1.8px solid var(--color-white-lite); // вертикальная линия
+    }
+  }
+}

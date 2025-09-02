@@ -1,0 +1,26 @@
+/* Центрирование flex */
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Flex с распределением элементов */
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Медиазапросы с кастомными breakpoint-переменными */
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == lg {
+    @media (max-width: var(--breakpoint-lg)) { @content; }
+  } @else if $breakpoint == md {
+    @media (max-width: var(--breakpoint-md)) { @content; }
+  } @else if $breakpoint == sm {
+    @media (max-width: var(--breakpoint-sm)) { @content; }
+  } @else if $breakpoint == xs {
+    @media (max-width: var(--breakpoint-xs)) { @content; }
+  }
+}
