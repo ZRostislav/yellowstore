@@ -1,0 +1,174 @@
+.footer {
+  position: relative;
+  background-color: var(--color-yellow);
+  width: 100%;
+  padding: 80px 120px 0;
+  // height: 592px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; // чтобы контент шёл сверху вниз
+  justify-content: space-between; // распределяем пространство, нижний блок прижат к низу
+  min-height: 300px; // минимальная высота футера
+  overflow: hidden;
+
+  &-ellipses {
+    &__border {
+      position: absolute;
+      top: -20%;
+      right: -5%;
+      width: 467px;
+      height: 467px;
+      border: 1px solid var(--color-red);
+      border-radius: 50%;
+      box-sizing: border-box;
+    }
+
+    &__bg {
+      position: absolute;
+      top: calc(16px - 20%);
+      right: calc(16px - 5%);
+      width: 434px;
+      height: 434px;
+      background: var(--color-red);
+      border-radius: 50%;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 80px;
+
+    .footer-left {
+      flex: 1;
+      min-width: 200px;
+      margin-bottom: 20px;
+
+      &__title{
+        h2 {
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 20px;
+        color: var(--color-white);
+        padding-bottom: 58px;
+        }
+      }
+
+      &__contact {
+
+        .contact {
+          &-title {
+            padding-left: 3px;
+            padding-bottom: 20px;
+            h3 {
+              color: var(--color-white);
+              font-weight: 700;
+              font-size: 20px;
+              line-height: 20px;
+            }
+          }
+
+          &-box {
+            display: -webkit-box;
+            align-items: center; 
+            margin-top: 20px;
+
+            &__content {
+
+            }
+            
+            &__icon {
+              width: 24px;
+              height: 24px;
+              margin-right: 11px;
+            }
+            &__text {
+              color: var(--color-white);
+              font-weight: 300;
+              font-size: 16px;
+              line-height: 20px;
+            }
+            &__number {
+              color: var(--color-white);
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-center, .footer-right {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+
+      &__title {
+        padding-bottom: 12px;
+        margin-bottom: 20px;
+        border-bottom: 3px solid var(--color-white);
+        width: max-content;
+
+        h3 {
+          color: var(--color-white);
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 20px;
+        }
+      }
+
+      &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        // font-weight: 500;
+        // font-size: 16px;
+        // line-height: 37px;
+
+        .list-link {
+          position: relative;
+          padding-left: 18px; // отступ для точки
+          margin-bottom: 10px;
+          color: var(--color-white);
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 37px;
+
+          &::before {
+            content: "•"; // точка
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--color-white);
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 37px;
+          }
+        }
+      }
+    }
+
+  }
+
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid var(--color-red);
+    padding-top: 20px;
+    padding-bottom: 30px;
+    width: 1200px;   
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--color-white);
+  }
+}
